@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <InputSet
+    id="CompensationInputSet"
+    mode="Typekey">
+    <Require
+      name="compensation"
+      type="Compensation"/>
+    <TextInput
+      id="ServiceProvider"
+      label="&quot;ServiceProvider&quot;"
+      value="compensation.ServiceProvider"/>
+  </InputSet>
+</PCF>

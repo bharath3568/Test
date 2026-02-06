@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="CompensationDV">
+    <Require
+      name="compensation"
+      type="Compensation"/>
+    <InputColumn>
+      <TypeKeyInput
+        editable="true"
+        id="CostCategory"
+        label="&quot;CostCategory&quot;"
+        value="compensation.CostCategory"
+        valueType="typekey.CostCategory">
+        <PostOnChange/>
+      </TypeKeyInput>
+      <TypeKeyInput
+        editable="true"
+        id="LineCategory"
+        label="&quot;LineCategory&quot;"
+        value="compensation.LineCategory"
+        valueType="typekey.LineCategory">
+        <PostOnChange/>
+      </TypeKeyInput>
+      <TextInput
+        editable="true"
+        id="Include"
+        label="&quot;Include&quot;"
+        required="(compensation.CostCategory == CostCategory.TC_BODY or compensation.CostCategory == CostCategory.TC_AUTOGLASS and compensation.LineCategory == LineCategory.TC_DOCTOR) ? true : false"
+        value="compensation.Include"></TextInput>
+      <TextInput
+        editable="true"
+        id="ServiceProvider"
+        label="&quot;ServiceProvider&quot;"
+        required="gw.Compensation.Compensation.isService(compensation)"
+        value="compensation.ServiceProvider"></TextInput>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

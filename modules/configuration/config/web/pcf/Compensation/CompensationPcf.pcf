@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    canVisit="true"
+    id="CompensationPcf"
+    title="&quot;CompensationPcf&quot;">
+    <LocationEntryPoint
+      signature="CompensationPcf()"/>
+    <Variable
+      initialValue="new Compensation()"
+      name="compensation"
+      type="entity.Compensation"/>
+    <Variable
+      name="mode"
+      type="String"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons
+          cancelVisible="true"
+          editVisible="true"/>
+        <ToolbarButton
+          id="Add"
+          label="&quot;Add&quot;"></ToolbarButton>
+      </Toolbar>
+      <PanelRef
+        def="CompensationDV(compensation)"></PanelRef>
+    </Screen>
+  </Page>
+</PCF>
