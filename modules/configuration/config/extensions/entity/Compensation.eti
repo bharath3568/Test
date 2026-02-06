@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="Compensation"
+  table="compensation"
+  type="retireable">
+  <typekey
+    name="CostCategory"
+    nullok="true"
+    typelist="CostCategory"/>
+  <typekey
+    name="LineCategory"
+    nullok="true"
+    typelist="LineCategory"/>
+  <column
+    name="Include"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    name="ServiceProvider"
+    nullok="true"
+    type="shorttext"/>
+  <typekey
+    name="Compensation_TXT"
+    nullok="true"
+    typelist="Compesation_Txt"/>
+</entity>
